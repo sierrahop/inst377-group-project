@@ -23,6 +23,7 @@
 		padding:10px;
 		border-radius:10px;
 		color:#404041;
+		box-shadow: 2px 3px 3px black;
 	}
 	footer {
 		background-color:#404041;
@@ -32,6 +33,7 @@
 		bottom:0;
 		width:100%;
 		margin:-8px;
+		color:#D3CAE2;
 	}
 
 	.button-89 {
@@ -82,6 +84,7 @@
 		width:45px;
 		margin-left:10px;
 		border-radius:20px;
+		box-shadow: 2px 5px 5px black;
 	}
 	#color2 {
 		background-color:white;
@@ -91,6 +94,7 @@
 		width:45px;
 		margin-left:10px;
 		border-radius:20px;
+		box-shadow: 2px 5px 5px black;
 	}
 	#color3 {
 		background-color:white;
@@ -100,6 +104,7 @@
 		width:45px;
 		margin-left:10px;
 		border-radius:20px;
+		box-shadow: 2px 5px 5px black;
 	}
 	#color4 {
 		background-color:white;
@@ -109,6 +114,7 @@
 		width:45px;
 		margin-left:10px;
 		border-radius:20px;
+		box-shadow: 2px 5px 5px black;
 	}
 	#color5 {
 		background-color:white;
@@ -118,11 +124,22 @@
 		width:45px;
 		margin-left:10px;
 		border-radius:20px;
+		box-shadow: 2px 5px 5px black;
 	}
 	.mid {
 		margin-top:20px;
 		margin-right:120px;
 		margin-left:150px;
+	}
+	#example {
+		background-color:white;
+		padding:20px;
+		width:50%;
+		margin-top:30px;
+		margin-left:280px;
+		float:left;
+		border-radius:10px;
+		box-shadow: 2px 5px 3px black;
 	}
 </style>
 </head>
@@ -138,7 +155,7 @@
 			<a href="ColorBlock_About.html">About</a>
 		</nav>
 		
-		<h3>*Tagline*</h3>
+		<h3>*tagline</h3>
 	</section>
 	
 	<section class="mid">
@@ -152,7 +169,13 @@
 		<box id="color4"><p>#000000</p></box>
 		<box id="color5"><p>#000000</p></box>
 		
-		<box id="example"></box>
+		<box id="example">
+			<h3>Example Page Elements</h3>
+			<h1>Example</h1>
+			<h2>Example</h2>
+			<h3>Example</h3>
+			<h4>Example</h4>
+		</box>
 	</section>
 	
 	<section class="bottom">
