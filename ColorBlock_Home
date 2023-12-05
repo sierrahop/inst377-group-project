@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Color Block</title>
+<style>
+	/* Color Scheme: #404041 - blackish gray, #F6EDE3 - pinkish white */
+	.top {
+		text-align:center;
+		padding:10px;
+		background-color:#404041;
+		color:#D3CAE2;
+		width:100%;
+		margin:-10px;
+	}
+	nav {
+		background-color:#F6EDE3;
+		padding:10px;
+		border-radius:10px;
+		color:#404041;
+	}
+	footer {
+		background-color:#404041;
+		color:#F6EDE3;
+		text-align:center;
+		position:fixed;
+		bottom:0;
+		width:100%;
+		margin:-8px;
+	}
+</style>
+</head>
+
+<body>
+	<section class="top">
+		
+		<h1>Color Block</h1>
+
+		<nav>
+			<a href="ColorBlock_Home.html">App</a> |
+			<a href="">Help</a> |
+			<a href="">About</a>
+		</nav>
+		
+		<h3>Tagline!</h3>
+	</section>
+	
+	<section class="mid">
+		<box id="userInput"></box>
+		<box id="colorOutput"></box>
+		<box id="example"></box>
+	</section>
+	
+	<section class="bottom">
+		<footer>
+			<p>Group 9 @ 2023</p>
+		</footer>
+	</section>
+	
+</body>
+</html>
