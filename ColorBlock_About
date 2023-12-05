@@ -34,10 +34,53 @@
 		width:100%;
 		margin:-8px;
 	}
+	#floating {
+		position: absolute;
+		background: gray;
+		padding: 0.5rem;
+		color: white;
+		box-sizing: border-box;
+	}
 </style>
+<script>
+	import { computePosition, shift, flip, offset } from "@floating-ui/dom";
+
+	const floating = document.getElementById("floating");
+
+	document.addEventListener("mousemove", ({ clientX, clientY }) => {
+		const virtualEl = {
+			getBoundingClientRect() {
+			return {
+				width: 0,
+				height: 0,
+				x: clientX,
+				y: clientY,
+				left: clientX,
+				right: clientX,
+				top: clientY,
+				bottom: clientY
+			};
+		}
+	};
+
+	computePosition(virtualEl, floating, {
+		placement: "right-start",
+		middleware: [offset(5), flip(), shift()]
+		}).then(({ x, y }) => {
+			Object.assign(floating.style, {
+				top: `${y}px`,
+				left: `${x}px`
+			});
+		});
+	});
+</script>
 </head>
 
 <body>
+	<div id="floating">
+      <img src="cursorstar.png" width="30" height="30" alt="">
+    </div>
+	
 	<section class="top">
 		
 		<h1>Color Block</h1>
@@ -47,7 +90,7 @@
 			<a href="ColorBlock_Doc.html">Documentation</a> |
 			<a href="ColorBlock_About.html">About</a>
 		</nav>
-	
+		<h3>About</h3>
 	</section>
 	
 </body>

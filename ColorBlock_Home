@@ -193,9 +193,11 @@
 	#example {
 		background-color:#F6EDE3;
 		padding:20px;
+		padding-bottom:5px;
 		width:90%;
 		margin-top:30px;
 		margin-left:50px;
+		margin-bottom:10%;
 		float:left;
 		border-radius:10px;
 		box-shadow: 2px 5px 3px black;
@@ -296,5 +298,19 @@
 		</footer>
 	</section>
 	
+	<!--script to add fun cursor effect!-->
+	<script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
+	<script>
+		options = {
+			"cursorOuter": "circle-basic",
+			"hoverEffect": "circle-move",
+			"hoverItemMove": false,
+			"defaultCursor": false,
+			"outerWidth": 30,
+			"outerHeight": 30
+		};
+		
+		magicMouse(options);
+	</script>
 </body>
 </html>

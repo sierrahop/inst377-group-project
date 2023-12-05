@@ -25,6 +25,15 @@
 		color:#404041;
 		box-shadow: 2px 3px 3px black;
 	}
+	a {
+		color:#404041;
+		text-decoration:none;
+		font-weight:normal;
+	}
+	a:hover {
+		color:#D49D35;
+		font-weight:bold;
+	}
 	footer {
 		background-color:#404041;
 		color:#F6EDE3;
@@ -47,8 +56,22 @@
 			<a href="ColorBlock_Doc.html">Documentation</a> |
 			<a href="ColorBlock_About.html">About</a>
 		</nav>
-	
+		<h3>Documentation</h3>
 	</section>
 	
+	<!--script to add fun cursor effect!-->
+	<script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
+	<script>
+		options = {
+			"cursorOuter": "circle-basic",
+			"hoverEffect": "circle-move",
+			"hoverItemMove": false,
+			"defaultCursor": false,
+			"outerWidth": 30,
+			"outerHeight": 30
+		};
+		
+		magicMouse(options);
+	</script>
 </body>
 </html>
