@@ -77,7 +77,7 @@
 		float:left;
 	}
 	#color1 {
-		background-color:white;
+		background-color:#F6EDE3;
 		float:right;
 		padding:50px;
 		padding-left:35px;
@@ -87,7 +87,7 @@
 		box-shadow: 2px 5px 5px black;
 	}
 	#color1:hover {
-		background-color:white;
+		background-color:#F6EDE3;
 		float:right;
 		padding:52px;
 		padding-left:37px;
@@ -97,7 +97,7 @@
 		box-shadow: 2px 5px 5px black;
 	}
 	#color2 {
-		background-color:white;
+		background-color:#F6EDE3;
 		float:right;
 		padding:50px;
 		padding-left:35px;
@@ -107,7 +107,7 @@
 		box-shadow: 2px 5px 5px black;
 	}
 	#color2:hover {
-		background-color:white;
+		background-color:#F6EDE3;
 		float:right;
 		padding:52px;
 		padding-left:37px;
@@ -117,7 +117,7 @@
 		box-shadow: 2px 5px 5px black;
 	}
 	#color3 {
-		background-color:white;
+		background-color:#F6EDE3;
 		float:right;
 		padding:50px;
 		padding-left:35px;
@@ -127,7 +127,7 @@
 		box-shadow: 2px 5px 5px black;
 	}
 	#color3:hover {
-		background-color:white;
+		background-color:#F6EDE3;
 		float:right;
 		padding:52px;
 		padding-left:37px;
@@ -137,7 +137,7 @@
 		box-shadow: 2px 5px 5px black;
 	}
 	#color4 {
-		background-color:white;
+		background-color:#F6EDE3;
 		float:right;
 		padding:50px;
 		padding-left:35px;
@@ -147,7 +147,7 @@
 		box-shadow: 2px 5px 5px black;
 	}
 	#color4:hover {
-		background-color:white;
+		background-color:#F6EDE3;
 		float:right;
 		padding:52px;
 		padding-left:37px;
@@ -157,7 +157,7 @@
 		box-shadow: 2px 5px 5px black;
 	}
 	#color5 {
-		background-color:white;
+		background-color:#F6EDE3;
 		float:right;
 		padding:50px;
 		padding-left:35px;
@@ -167,7 +167,7 @@
 		box-shadow: 2px 5px 5px black;
 	}
 	#color5:hover {
-		background-color:white;
+		background-color:#F6EDE3;
 		float:right;
 		padding:52px;
 		padding-left:37px;
@@ -182,7 +182,7 @@
 		margin-left:150px;
 	}
 	#example {
-		background-color:white;
+		background-color:#F6EDE3;
 		padding:20px;
 		width:50%;
 		margin-top:30px;
@@ -238,3 +238,4 @@
 	</section>
 	
 </body>
+</html>
