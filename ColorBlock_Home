@@ -86,11 +86,31 @@
 		border-radius:20px;
 		box-shadow: 2px 5px 5px black;
 	}
+	#color1:hover {
+		background-color:white;
+		float:right;
+		padding:52px;
+		padding-left:37px;
+		width:45px;
+		margin-left:10px;
+		border-radius:20px;
+		box-shadow: 2px 5px 5px black;
+	}
 	#color2 {
 		background-color:white;
 		float:right;
 		padding:50px;
 		padding-left:35px;
+		width:45px;
+		margin-left:10px;
+		border-radius:20px;
+		box-shadow: 2px 5px 5px black;
+	}
+	#color2:hover {
+		background-color:white;
+		float:right;
+		padding:52px;
+		padding-left:37px;
 		width:45px;
 		margin-left:10px;
 		border-radius:20px;
@@ -106,6 +126,16 @@
 		border-radius:20px;
 		box-shadow: 2px 5px 5px black;
 	}
+	#color3:hover {
+		background-color:white;
+		float:right;
+		padding:52px;
+		padding-left:37px;
+		width:45px;
+		margin-left:10px;
+		border-radius:20px;
+		box-shadow: 2px 5px 5px black;
+	}
 	#color4 {
 		background-color:white;
 		float:right;
@@ -116,11 +146,31 @@
 		border-radius:20px;
 		box-shadow: 2px 5px 5px black;
 	}
+	#color4:hover {
+		background-color:white;
+		float:right;
+		padding:52px;
+		padding-left:37px;
+		width:45px;
+		margin-left:10px;
+		border-radius:20px;
+		box-shadow: 2px 5px 5px black;
+	}
 	#color5 {
 		background-color:white;
 		float:right;
 		padding:50px;
 		padding-left:35px;
+		width:45px;
+		margin-left:10px;
+		border-radius:20px;
+		box-shadow: 2px 5px 5px black;
+	}
+	#color5:hover {
+		background-color:white;
+		float:right;
+		padding:52px;
+		padding-left:37px;
 		width:45px;
 		margin-left:10px;
 		border-radius:20px;
@@ -140,6 +190,9 @@
 		float:left;
 		border-radius:10px;
 		box-shadow: 2px 5px 3px black;
+	}
+	#example h3:first-child {
+		text-align:center;
 	}
 </style>
 </head>
@@ -170,7 +223,7 @@
 		<box id="color5"><p>#000000</p></box>
 		
 		<box id="example">
-			<h3>Example Page Elements</h3>
+			<h3>Example Page Elements:</h3>
 			<h1>Example</h1>
 			<h2>Example</h2>
 			<h3>Example</h3>
@@ -185,4 +238,3 @@
 	</section>
 	
 </body>
-</html>
