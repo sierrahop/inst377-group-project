@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <title>Color Block</title>
 <style>
-	/* Color Scheme: #404041 - blackish gray, #F6EDE3 - pinkish white */
+	/* Color Scheme: #404041 - blackish gray, #F6EDE3 - pinkish white, #D3CAE2 - light purple */
+	body {
+		background-color:#404041;
+		font-family: 'Courier New', monospace;
+	}
 	.top {
 		text-align:center;
 		padding:10px;
@@ -12,6 +16,7 @@
 		color:#D3CAE2;
 		width:100%;
 		margin:-10px;
+		padding-bottom: -5px;
 	}
 	nav {
 		background-color:#F6EDE3;
@@ -28,6 +33,97 @@
 		width:100%;
 		margin:-8px;
 	}
+
+	.button-89 {
+		--b: 3px;   /* border thickness */
+		--s: .45em; /* size of the corner */
+		--color: #D3CAE2;
+
+		padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+		color: var(--color);
+		--_p: var(--s);
+		background:
+		conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+		var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+		transition: .3s linear, color 0s, background-color 0s;
+		outline: var(--b) solid #0000;
+		outline-offset: .6em;
+		font-size: 16px;
+
+		border: 0;
+
+		user-select: none;
+		-webkit-user-select: none;
+		touch-action: manipulation;
+		font-family: 'Courier New', monospace;
+	}
+
+	.button-89:hover,
+	.button-89:focus-visible{
+	  --_p: 0px;
+	  outline-color: var(--color);
+	  outline-offset: .05em;
+	}
+	.button-89:active {
+	  background: var(--color);
+	  color: #fff;
+	}
+	#userInput {
+		padding:50px;
+		border-radius:10px;
+		margin-left:10%;
+		float:left;
+	}
+	#color1 {
+		background-color:white;
+		float:right;
+		padding:50px;
+		padding-left:35px;
+		width:45px;
+		margin-left:10px;
+		border-radius:20px;
+	}
+	#color2 {
+		background-color:white;
+		float:right;
+		padding:50px;
+		padding-left:35px;
+		width:45px;
+		margin-left:10px;
+		border-radius:20px;
+	}
+	#color3 {
+		background-color:white;
+		float:right;
+		padding:50px;
+		padding-left:35px;
+		width:45px;
+		margin-left:10px;
+		border-radius:20px;
+	}
+	#color4 {
+		background-color:white;
+		float:right;
+		padding:50px;
+		padding-left:35px;
+		width:45px;
+		margin-left:10px;
+		border-radius:20px;
+	}
+	#color5 {
+		background-color:white;
+		float:right;
+		padding:50px;
+		padding-left:35px;
+		width:45px;
+		margin-left:10px;
+		border-radius:20px;
+	}
+	.mid {
+		margin-top:20px;
+		margin-right:120px;
+		margin-left:150px;
+	}
 </style>
 </head>
 
@@ -38,22 +134,30 @@
 
 		<nav>
 			<a href="ColorBlock_Home.html">App</a> |
-			<a href="">Help</a> |
-			<a href="">About</a>
+			<a href="ColorBlock_Help.html">Documentation</a> |
+			<a href="ColorBlock_About.html">About</a>
 		</nav>
 		
-		<h3>Tagline!</h3>
+		<h3>*Tagline*</h3>
 	</section>
 	
 	<section class="mid">
-		<box id="userInput"></box>
-		<box id="colorOutput"></box>
+		<box id="userInput">
+			<button class="button-89">Generate Color Palette</button>
+		</box>
+		
+		<box id="color1"><p>#000000</p></box>
+		<box id="color2"><p>#000000</p></box>
+		<box id="color3"><p>#000000</p></box>
+		<box id="color4"><p>#000000</p></box>
+		<box id="color5"><p>#000000</p></box>
+		
 		<box id="example"></box>
 	</section>
 	
 	<section class="bottom">
 		<footer>
-			<p>Group 9 @ 2023</p>
+			<p>:) <br><br>Group 9 @ INST 377</p>
 		</footer>
 	</section>
 	
