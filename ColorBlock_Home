@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Color Block</title>
 <style>
-	/* Color Scheme: #404041 - blackish gray, #F6EDE3 - pinkish white, #D3CAE2 - light purple */
+	/* Color Scheme: #404041 - blackish gray, #F6EDE3 - pinkish white, #D3CAE2 - light purple, #D49D35 - lightish orange */
 	body {
 		background-color:#404041;
 		font-family: 'Courier New', monospace;
@@ -24,6 +24,15 @@
 		border-radius:10px;
 		color:#404041;
 		box-shadow: 2px 3px 3px black;
+	}
+	a {
+		color:#404041;
+		text-decoration:none;
+		font-weight:normal;
+	}
+	a:hover {
+		color:#D49D35;
+		font-weight:bold;
 	}
 	footer {
 		background-color:#404041;
@@ -184,15 +193,53 @@
 	#example {
 		background-color:#F6EDE3;
 		padding:20px;
-		width:50%;
+		width:90%;
 		margin-top:30px;
-		margin-left:280px;
+		margin-left:50px;
 		float:left;
 		border-radius:10px;
 		box-shadow: 2px 5px 3px black;
+
 	}
 	#example h3:first-child {
 		text-align:center;
+	}
+	.button-34 {
+	  background: #D3CAE2;
+	  border-radius: 999px;
+	  box-shadow: #D3CAE2 0 10px 20px -10px;
+	  box-sizing: border-box;
+	  color: #FFFFFF;
+	  cursor: pointer;
+	  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+	  font-size: 16px;
+	  font-weight: 700;
+	  line-height: 24px;
+	  opacity: 1;
+	  outline: 0 solid transparent;
+	  padding: 8px 18px;
+	  user-select: none;
+	  -webkit-user-select: none;
+	  touch-action: manipulation;
+	  width: fit-content;
+	  word-break: break-word;
+	  border: 0;
+	}
+	#headers {
+		float:left;
+		margin-top:-20px;
+	}
+	#paragraph {
+		float:none;
+		width:60%;
+		margin-top:40px;
+		margin-left:20%;
+		text-align:center;
+	}
+	#buttonEx {
+		float:right;
+		margin-top:-105px;
+		margin-right:40px;
 	}
 </style>
 </head>
@@ -224,10 +271,22 @@
 		
 		<box id="example">
 			<h3>Example Page Elements:</h3>
-			<h1>Example</h1>
-			<h2>Example</h2>
-			<h3>Example</h3>
-			<h4>Example</h4>
+			<div id="headers">
+				<h1>Example</h1>
+				<h2>Example</h2>
+				<h3>Example</h3>
+				<h4>Example</h4>
+				<h5>Example</h5>
+			</div>
+			
+			<div id="paragraph">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			
+			<div id="buttonEx">
+				<button class="button-34">Button</button>
+			</div>
+			
 		</box>
 	</section>
 	
