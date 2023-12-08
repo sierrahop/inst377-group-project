@@ -43,6 +43,16 @@
 		width:100%;
 		margin:-8px;
 	}
+	.doc {
+		background-color:#F6EDE3;
+		padding:20px;
+		border-radius:10px;
+		box-shadow: 2px 3px 3px black;
+		text-align:center;
+		width:60%;
+		margin-top:40px;
+		margin-left:19%;
+	}
 </style>
 </head>
 
@@ -56,7 +66,11 @@
 			<a href="ColorBlock_Doc.html">Documentation</a> |
 			<a href="ColorBlock_About.html">About</a>
 		</nav>
-		<h3>Documentation</h3>
+		<h3>*documentation</h3>
+	</section>
+	
+	<section class="doc">
+		<p>API Used: <a href="http://colormind.io/api-access/" style="text-decoration: underline">ColorMind API</a></p>
 	</section>
 	
 	<!--script to add fun cursor effect!-->
