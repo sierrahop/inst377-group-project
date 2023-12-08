@@ -1,4 +1,4 @@
-# inst377-group-project
+#README
 
 Project Title: Color Block
 
@@ -9,3 +9,5 @@ Target Browsers: Google Chrome, Safari
 Link to User Manual:
 
 Link to Developer Manual:
+
+#Developer Manual
