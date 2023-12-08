@@ -18,7 +18,7 @@ How to run application:
 
 How to run tests:
 
-API:
+API: http://colormind.io/api-access/
 
 Known Bugs:
 
