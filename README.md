@@ -1,4 +1,4 @@
-#README
+# README
 
 Project Title: Color Block
 
@@ -10,4 +10,4 @@ Link to User Manual:
 
 Link to Developer Manual:
 
-#Developer Manual
+# Developer Manual
