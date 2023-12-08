@@ -11,3 +11,15 @@ Link to User Manual:
 Link to Developer Manual:
 
 # Developer Manual
+
+How to install application:
+
+How to run application:
+
+How to run tests:
+
+API:
+
+Known Bugs:
+
+Road-Map:
