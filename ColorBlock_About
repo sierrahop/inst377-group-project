@@ -25,6 +25,15 @@
 		color:#404041;
 		box-shadow: 2px 3px 3px black;
 	}
+	a {
+		color:#404041;
+		text-decoration:none;
+		font-weight:normal;
+	}
+	a:hover {
+		color:#D49D35;
+		font-weight:bold;
+	}
 	footer {
 		background-color:#404041;
 		color:#F6EDE3;
@@ -34,53 +43,20 @@
 		width:100%;
 		margin:-8px;
 	}
-	#floating {
-		position: absolute;
-		background: gray;
-		padding: 0.5rem;
-		color: white;
-		box-sizing: border-box;
+	.about {
+		background-color:#F6EDE3;
+		padding:20px;
+		border-radius:10px;
+		box-shadow: 2px 3px 3px black;
+		text-align:center;
+		width:60%;
+		margin-top:40px;
+		margin-left:19%;
 	}
 </style>
-<script>
-	import { computePosition, shift, flip, offset } from "@floating-ui/dom";
-
-	const floating = document.getElementById("floating");
-
-	document.addEventListener("mousemove", ({ clientX, clientY }) => {
-		const virtualEl = {
-			getBoundingClientRect() {
-			return {
-				width: 0,
-				height: 0,
-				x: clientX,
-				y: clientY,
-				left: clientX,
-				right: clientX,
-				top: clientY,
-				bottom: clientY
-			};
-		}
-	};
-
-	computePosition(virtualEl, floating, {
-		placement: "right-start",
-		middleware: [offset(5), flip(), shift()]
-		}).then(({ x, y }) => {
-			Object.assign(floating.style, {
-				top: `${y}px`,
-				left: `${x}px`
-			});
-		});
-	});
-</script>
 </head>
 
 <body>
-	<div id="floating">
-      <img src="cursorstar.png" width="30" height="30" alt="">
-    </div>
-	
 	<section class="top">
 		
 		<h1>Color Block</h1>
@@ -90,8 +66,29 @@
 			<a href="ColorBlock_Doc.html">Documentation</a> |
 			<a href="ColorBlock_About.html">About</a>
 		</nav>
-		<h3>About</h3>
+		<h3>*about</h3>
 	</section>
 	
+	<section class="about">
+		<p>This project aims to solve the issue of creative block when it comes to choosing color schemes in design.</p>
+		<h4>** Some stakeholders include: **</h4>
+		<p>UX/UI Designers, Web Designers, Artists, Social Media Content Creators, and more!</p>
+		<p>With this project, these stakeholders will be able to jumpstart/further their creative process through the visualization of 6 randomly generated cohesive colors that will be then used as the webpage's color scheme in order to provide a visual example of the color scheme. Each time the user presses the 'Generate Random Colors' button, each color, along with its HEX code, will appear in the appropriate color box, as well as be applied to the different CSS elements on the page. Each press of this button will generate a new set of colors.</p>
+	</section>
+	
+	<!--script to add fun cursor effect!-->
+	<script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
+	<script>
+		options = {
+			"cursorOuter": "circle-basic",
+			"hoverEffect": "circle-move",
+			"hoverItemMove": false,
+			"defaultCursor": false,
+			"outerWidth": 30,
+			"outerHeight": 30
+		};
+		
+		magicMouse(options);
+	</script>
 </body>
 </html>
