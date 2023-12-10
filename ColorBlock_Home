@@ -193,7 +193,7 @@
 	#example {
 		background-color:#F6EDE3;
 		padding:20px;
-		padding-bottom:5px;
+		padding-bottom:30px;
 		width:90%;
 		margin-top:30px;
 		margin-left:50px;
@@ -253,8 +253,8 @@
 
 		<nav>
 			<a href="ColorBlock_Home.html">App</a> |
-			<a href="ColorBlock_Doc.html">Documentation</a> |
-			<a href="ColorBlock_About.html">About</a>
+			<a href="ColorBlock_Doc.html" id="docLink">Documentation</a> |
+			<a href="ColorBlock_About.html" id="abLink">About</a>
 		</nav>
 		
 		<h3>*app</h3>
@@ -272,13 +272,12 @@
 		<box id="color1"><p>#000000</p></box>
 		
 		<box id="example">
-			<h3>Example Page Elements:</h3>
+			<h3 id="exHeader">Example Page Elements:</h3>
 			<div id="headers">
-				<h1>Example</h1>
-				<h2>Example</h2>
-				<h3>Example</h3>
-				<h4>Example</h4>
-				<h5>Example</h5>
+				<h1 id="one">Example</h1>
+				<h2 id="two">Example</h2>
+				<h3 id="three">Example</h3>
+				<h4 id="four">Example</h4>
 			</div>
 			
 			<div id="paragraph">
@@ -294,34 +293,120 @@
 	
 	<section class="bottom">
 		<footer>
-			<p>:) <br><br>Group 9 @ INST 377</p>
+			<p id="footText">:) <br><br>Group 9 @ INST 377</p>
 		</footer>
 	</section>
 	
 	<script>
 		function generateRandomColors() {
-			for (let i = 1; i <= 5; i++) {
-				const colorBox = document.getElementById("color" + i);
-				const hexCodeElement = colorBox.querySelector('p');
-
-				colorBox.style.backgroundColor = '#F6EDE3'; // set a default color
-				hexCodeElement.textContent = '#000000'; // set a default hex code
-			}
 			
-			fetch('https://www.colr.org/json/schemes/random/7?scheme_size_limit=5')
+			
+			const timestamp = new Date().getTime();
+    		const apiUrl = `https://www.colr.org/json/schemes/random/7?scheme_size_limit=>5&_=${timestamp}`;
+			
+			fetch(apiUrl)
 				.then(response =>
 					 response.json()
 					 )
 				.then(data => {
                     const colors = data.schemes[0].colors;
+				
+					let textColor = "";
 
-                    for (let i = 0; i < colors.length; i++) {
+                    for (let i = 0; i < 6; i++) {
                         const colorHex = colors[i];
                         const colorBox = document.getElementById("color" + (i + 1));
 						const hexCodeElement = colorBox.querySelector('p');
 						
                         colorBox.style.backgroundColor = '#' + colorHex;
 						hexCodeElement.textContent = '#' + colorHex;
+						
+						if (parseInt(colorHex.charAt(0), 16) === 0 || parseInt(colorHex.charAt(0), 16) === 1) {
+							hexCodeElement.style.color = 'white';
+						} else {
+							hexCodeElement.style.color = 'black';
+						}
+						
+						if(colorBox.id == 'color1'){
+							document.body.style.backgroundColor = '#' + colorHex;
+							document.querySelector('.top').style.backgroundColor = '#' + colorHex;
+							document.querySelector('footer').style.backgroundColor = '#' + colorHex;
+							
+							document.getElementById('one').style.color = '#' + colorHex;
+						}
+						
+						if(colorBox.id == 'color2'){
+							document.querySelector('nav').style.backgroundColor = '#' + colorHex;
+							document.getElementById('example').style.backgroundColor = '#' + colorHex;
+						}
+						
+						if(colorBox.id == 'color3'){
+							document.querySelector('h1').style.color = '#' + colorHex;
+							document.querySelector('h3').style.color = '#' + colorHex;
+							
+							document.getElementById('two').style.color = '#' + colorHex;
+							
+							document.querySelector('.button-34').style.backgroundColor = '#' + colorHex;
+							
+							document.getElementById('footText').style.color = '#' + colorHex;
+						}
+						
+						if(colorBox.id == 'color4'){
+							document.querySelector('a').style.color = '#' + colorHex;
+							textColor = '#' + colorHex;
+							
+							document.getElementById('three').style.color = '#' + colorHex;
+							
+							document.querySelector('.button-89').style.color = '#' + colorHex;
+							document.querySelector('.button-89').style.borderColor = '#' + colorHex;
+							
+							document.getElementById('exHeader').style.color = '#' + colorHex;
+							
+							document.getElementById('paragraph').style.color = '#' + colorHex;
+						}
+						
+						if(colorBox.id == 'color5'){
+							// app link in nav bar
+							linkElement = document.querySelector('a');
+							linkElement.addEventListener('mouseenter', function() {
+								// Change the color when the mouse enters the element
+								linkElement.style.color = '#' + colorHex;
+							});
+
+							linkElement.addEventListener('mouseleave', function() {
+								// Change the color back to normal when the mouse leaves the element
+								linkElement.style.color = textColor;
+							});
+							
+							//documentation link in nav bar
+							docLink = document.getElementById('docLink');
+							docLink.style.color = textColor;
+							docLink.addEventListener('mouseenter', function() {
+								// Change the color when the mouse enters the element
+								docLink.style.color = '#' + colorHex;
+							});
+
+							docLink.addEventListener('mouseleave', function() {
+								// Change the color back to normal when the mouse leaves the element
+								docLink.style.color = textColor;
+							});
+							
+							//about link in nav bar
+							abLink = document.getElementById('abLink');
+							abLink.style.color = textColor;
+							abLink.addEventListener('mouseenter', function() {
+								// Change the color when the mouse enters the element
+								abLink.style.color = '#' + colorHex;
+							});
+
+							abLink.addEventListener('mouseleave', function() {
+								// Change the color back to normal when the mouse leaves the element
+								abLink.style.color = textColor;
+							});
+							
+							document.getElementById('four').style.color = '#' + colorHex;
+							document.querySelector('.button-34').style.color = '#' + colorHex;
+						}
                     }
 				})
 		}
