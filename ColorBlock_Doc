@@ -70,7 +70,7 @@
 	</section>
 	
 	<section class="doc">
-		<p>API Used: <a href="http://colormind.io/api-access/" style="text-decoration: underline">ColorMind API</a></p>
+		<p>API Used: <a href="https://www.colr.org/api.html" style="text-decoration: underline">Colr.org</a></p>
 	</section>
 	
 	<!--script to add fun cursor effect!-->
