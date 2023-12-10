@@ -257,19 +257,19 @@
 			<a href="ColorBlock_About.html">About</a>
 		</nav>
 		
-		<h3>*tagline</h3>
+		<h3>*app</h3>
 	</section>
 	
 	<section class="mid">
 		<box id="userInput">
-			<button class="button-89">Generate Color Palette</button>
+			<button class="button-89" onclick="generateRandomColors()">Generate Color Palette</button>
 		</box>
 		
-		<box id="color1"><p>#000000</p></box>
-		<box id="color2"><p>#000000</p></box>
-		<box id="color3"><p>#000000</p></box>
-		<box id="color4"><p>#000000</p></box>
 		<box id="color5"><p>#000000</p></box>
+		<box id="color4"><p>#000000</p></box>
+		<box id="color3"><p>#000000</p></box>
+		<box id="color2"><p>#000000</p></box>
+		<box id="color1"><p>#000000</p></box>
 		
 		<box id="example">
 			<h3>Example Page Elements:</h3>
@@ -297,6 +297,35 @@
 			<p>:) <br><br>Group 9 @ INST 377</p>
 		</footer>
 	</section>
+	
+	<script>
+		function generateRandomColors() {
+			for (let i = 1; i <= 5; i++) {
+				const colorBox = document.getElementById("color" + i);
+				const hexCodeElement = colorBox.querySelector('p');
+
+				colorBox.style.backgroundColor = '#F6EDE3'; // set a default color
+				hexCodeElement.textContent = '#000000'; // set a default hex code
+			}
+			
+			fetch('https://www.colr.org/json/schemes/random/7?scheme_size_limit=5')
+				.then(response =>
+					 response.json()
+					 )
+				.then(data => {
+                    const colors = data.schemes[0].colors;
+
+                    for (let i = 0; i < colors.length; i++) {
+                        const colorHex = colors[i];
+                        const colorBox = document.getElementById("color" + (i + 1));
+						const hexCodeElement = colorBox.querySelector('p');
+						
+                        colorBox.style.backgroundColor = '#' + colorHex;
+						hexCodeElement.textContent = '#' + colorHex;
+                    }
+				})
+		}
+	</script>
 	
 	<!--script to add fun cursor effect!-->
 	<script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
