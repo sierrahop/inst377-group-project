@@ -81,6 +81,7 @@
 	}
 	#userInput {
 		padding:50px;
+		padding-top:20px;
 		border-radius:10px;
 		margin-left:10%;
 		float:left;
@@ -193,9 +194,9 @@
 	#example {
 		background-color:#F6EDE3;
 		padding:20px;
-		padding-bottom:30px;
+		padding-bottom:20px;
 		width:90%;
-		margin-top:30px;
+		margin-top:20px;
 		margin-left:50px;
 		margin-bottom:10%;
 		float:left;
@@ -262,7 +263,8 @@
 	
 	<section class="mid">
 		<box id="userInput">
-			<button class="button-89" onclick="generateRandomColors()">Generate Color Palette</button>
+			<button class="button-89" onclick="generateRandomColors()">Generate Color Palette</button><br><br>
+			<button class="button-89" onclick="latestScheme()">View Latest Color Scheme</button>
 		</box>
 		
 		<box id="color5"><p>#000000</p></box>
@@ -344,6 +346,8 @@
 							document.querySelector('h1').style.color = '#' + colorHex;
 							document.querySelector('h3').style.color = '#' + colorHex;
 							
+							document.getElementById('exHeader').style.color = '#' + colorHex;
+							
 							document.getElementById('two').style.color = '#' + colorHex;
 							
 							document.querySelector('.button-34').style.backgroundColor = '#' + colorHex;
@@ -359,8 +363,6 @@
 							
 							document.querySelector('.button-89').style.color = '#' + colorHex;
 							document.querySelector('.button-89').style.borderColor = '#' + colorHex;
-							
-							document.getElementById('exHeader').style.color = '#' + colorHex;
 							
 							document.getElementById('paragraph').style.color = '#' + colorHex;
 						}
@@ -409,6 +411,112 @@
 						}
                     }
 				})
+		}
+		
+		function latestScheme() {
+			fetch('https://www.colr.org/json/scheme/latest')
+			.then(response => 
+				 response.json()
+				 )
+			.then(data => {
+				 const colors = data.schemes[0].colors;
+
+                 for (let i = 0; i < 6; i++) {
+					const colorHex = colors[i];
+					const colorBox = document.getElementById("color" + (i + 1));
+					const hexCodeElement = colorBox.querySelector('p');
+
+					colorBox.style.backgroundColor = '#' + colorHex;
+					hexCodeElement.textContent = '#' + colorHex;
+
+					if (parseInt(colorHex.charAt(0), 16) === 0 || parseInt(colorHex.charAt(0), 16) === 1) {
+						hexCodeElement.style.color = 'white';
+					} else {
+						hexCodeElement.style.color = 'black';
+					}
+					 
+					 if(colorBox.id == 'color1'){
+							document.body.style.backgroundColor = '#' + colorHex;
+							document.querySelector('.top').style.backgroundColor = '#' + colorHex;
+							document.querySelector('footer').style.backgroundColor = '#' + colorHex;
+							
+							document.getElementById('one').style.color = '#' + colorHex;
+						}
+						
+						if(colorBox.id == 'color2'){
+							document.querySelector('nav').style.backgroundColor = '#' + colorHex;
+							document.getElementById('example').style.backgroundColor = '#' + colorHex;
+						}
+						
+						if(colorBox.id == 'color3'){
+							document.querySelector('h1').style.color = '#' + colorHex;
+							document.querySelector('h3').style.color = '#' + colorHex;
+							
+							document.getElementById('exHeader').style.color = '#' + colorHex;
+							
+							document.getElementById('two').style.color = '#' + colorHex;
+							
+							document.querySelector('.button-34').style.backgroundColor = '#' + colorHex;
+							
+							document.getElementById('footText').style.color = '#' + colorHex;
+						}
+						
+						if(colorBox.id == 'color4'){
+							document.querySelector('a').style.color = '#' + colorHex;
+							textColor = '#' + colorHex;
+							
+							document.getElementById('three').style.color = '#' + colorHex;
+							
+							document.querySelector('.button-89').style.color = '#' + colorHex;
+							document.querySelector('.button-89').style.borderColor = '#' + colorHex;
+							
+							document.getElementById('paragraph').style.color = '#' + colorHex;
+						}
+						
+						if(colorBox.id == 'color5'){
+							// app link in nav bar
+							linkElement = document.querySelector('a');
+							linkElement.addEventListener('mouseenter', function() {
+								// Change the color when the mouse enters the element
+								linkElement.style.color = '#' + colorHex;
+							});
+
+							linkElement.addEventListener('mouseleave', function() {
+								// Change the color back to normal when the mouse leaves the element
+								linkElement.style.color = textColor;
+							});
+							
+							//documentation link in nav bar
+							docLink = document.getElementById('docLink');
+							docLink.style.color = textColor;
+							docLink.addEventListener('mouseenter', function() {
+								// Change the color when the mouse enters the element
+								docLink.style.color = '#' + colorHex;
+							});
+
+							docLink.addEventListener('mouseleave', function() {
+								// Change the color back to normal when the mouse leaves the element
+								docLink.style.color = textColor;
+							});
+							
+							//about link in nav bar
+							abLink = document.getElementById('abLink');
+							abLink.style.color = textColor;
+							abLink.addEventListener('mouseenter', function() {
+								// Change the color when the mouse enters the element
+								abLink.style.color = '#' + colorHex;
+							});
+
+							abLink.addEventListener('mouseleave', function() {
+								// Change the color back to normal when the mouse leaves the element
+								abLink.style.color = textColor;
+							});
+							
+							document.getElementById('four').style.color = '#' + colorHex;
+							document.querySelector('.button-34').style.color = '#' + colorHex;
+						}
+				 }
+			})
 		}
 	</script>
 	
