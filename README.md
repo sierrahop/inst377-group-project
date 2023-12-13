@@ -8,7 +8,7 @@ Target Browsers: Google Chrome, Safari
 
 Link to User Manual:
 
-Link to Developer Manual:
+[Link to Developer Manual:](https://github.com/sierrahop/inst377-group-project?tab=readme-ov-file#developer-manual)
 
 # Developer Manual
 
