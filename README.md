@@ -12,11 +12,11 @@ Link to Developer Manual:
 
 # Developer Manual
 
-How to install application:
+Install dependencies (do this after you clone the repo): npm i
 
-How to run application:
+Start the web application: npm start
 
-How to run tests:
+Stop the web application: CTRL + C in your terminal
 
 API: https://www.colr.org/api.html
 
